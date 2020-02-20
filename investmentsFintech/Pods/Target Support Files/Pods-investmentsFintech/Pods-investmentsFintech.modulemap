@@ -1,0 +1,6 @@
+framework module Pods_investmentsFintech {
+  umbrella header "Pods-investmentsFintech-umbrella.h"
+
+  export *
+  module * { export * }
+}
