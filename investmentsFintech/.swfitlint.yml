@@ -1,0 +1,3 @@
+line_lenght:
+- 300 # warning
+- 400 # error

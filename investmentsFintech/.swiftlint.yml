@@ -1,0 +1,6 @@
+line_lenght:
+- 200 # warning
+- 300 # error-
+disabled_rules: # rule identifiers to exclude from running
+- type_name
+- line_length
