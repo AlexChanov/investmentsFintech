@@ -1,6 +1,21 @@
-line_lenght:
-- 200 # warning
-- 300 # error-
-disabled_rules: # rule identifiers to exclude from running
-- type_name
-- line_length
+excluded: # paths to ignore during linting. overridden by `included`.
+  - Pods
+  - R.generated.swift
+identifier_name:
+ max_length: # warning and error
+    warning: 60
+    error: 100
+type_name:
+ min_length: 3 # only warning
+ max_length: # warning and error
+    warning: 60
+    error: 100
+file_length:
+ warning: 1000
+ error: 2000
+line_length:
+ warning: 120
+ ignores_urls: true
+cyclomatic_complexity: 100
+function_parameter_count: 6
+function_body_length: 1000
