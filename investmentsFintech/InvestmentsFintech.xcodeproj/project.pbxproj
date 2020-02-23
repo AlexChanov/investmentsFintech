@@ -15,6 +15,12 @@
 		6925006223FEC3EC0008292D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6925006123FEC3EC0008292D /* Assets.xcassets */; };
 		6925006523FEC3EC0008292D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6925006323FEC3EC0008292D /* LaunchScreen.storyboard */; };
 		6925006F23FEC63D0008292D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6925006E23FEC63D0008292D /* R.generated.swift */; };
+		EB3C7EBA2402919400C3E433 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C7EB92402919400C3E433 /* KeychainItem.swift */; };
+		EB3C7EBD240291D500C3E433 /* KeychainLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C7EBC240291D500C3E433 /* KeychainLevel.swift */; };
+		EB3C7EBF240291F200C3E433 /* KeyConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C7EBE240291F200C3E433 /* KeyConstructor.swift */; };
+		EB3C7EC12402921300C3E433 /* KeychainItemClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C7EC02402921300C3E433 /* KeychainItemClass.swift */; };
+		EB3C7EC3240292A500C3E433 /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C7EC2240292A500C3E433 /* KeychainConfiguration.swift */; };
+		EB3C7EC524029D9E00C3E433 /* KeychainDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C7EC424029D9E00C3E433 /* KeychainDataStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		6925006E23FEC63D0008292D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C234934864A5E0EAE343106E /* Pods-InvestmentsFintech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvestmentsFintech.release.xcconfig"; path = "Target Support Files/Pods-InvestmentsFintech/Pods-InvestmentsFintech.release.xcconfig"; sourceTree = "<group>"; };
 		C6FF49412929EC96C7044CCA /* Pods_InvestmentsFintech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InvestmentsFintech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB3C7EB92402919400C3E433 /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainItem.swift; path = InvestmentsFintech/Core/Keychain/KeychainItem.swift; sourceTree = SOURCE_ROOT; };
+		EB3C7EBC240291D500C3E433 /* KeychainLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainLevel.swift; path = investmentsFintech/Core/Keychain/KeychainLevel.swift; sourceTree = SOURCE_ROOT; };
+		EB3C7EBE240291F200C3E433 /* KeyConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyConstructor.swift; path = investmentsFintech/Core/Keychain/KeyConstructor.swift; sourceTree = SOURCE_ROOT; };
+		EB3C7EC02402921300C3E433 /* KeychainItemClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainItemClass.swift; path = investmentsFintech/Core/Keychain/KeychainItemClass.swift; sourceTree = SOURCE_ROOT; };
+		EB3C7EC2240292A500C3E433 /* KeychainConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainConfiguration.swift; path = investmentsFintech/Core/Keychain/KeychainConfiguration.swift; sourceTree = SOURCE_ROOT; };
+		EB3C7EC424029D9E00C3E433 /* KeychainDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainDataStorage.swift; path = investmentsFintech/Core/Keychain/KeychainDataStorage.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +85,7 @@
 		6925005723FEC3EA0008292D /* InvestmentsFintech */ = {
 			isa = PBXGroup;
 			children = (
+				EB3C7EB82402917200C3E433 /* Core */,
 				6925006D23FEC6270008292D /* Resourses */,
 				6925005A23FEC3EA0008292D /* SceneDelegate.swift */,
 				6925005823FEC3EA0008292D /* AppDelegate.swift */,
@@ -91,6 +104,27 @@
 				6925006E23FEC63D0008292D /* R.generated.swift */,
 			);
 			path = Resourses;
+			sourceTree = "<group>";
+		};
+		EB3C7EB82402917200C3E433 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EB3C7EBB240291BC00C3E433 /* Keychain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EB3C7EBB240291BC00C3E433 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				EB3C7EC2240292A500C3E433 /* KeychainConfiguration.swift */,
+				EB3C7EB92402919400C3E433 /* KeychainItem.swift */,
+				EB3C7EC02402921300C3E433 /* KeychainItemClass.swift */,
+				EB3C7EBC240291D500C3E433 /* KeychainLevel.swift */,
+				EB3C7EBE240291F200C3E433 /* KeyConstructor.swift */,
+				EB3C7EC424029D9E00C3E433 /* KeychainDataStorage.swift */,
+			);
+			path = Keychain;
 			sourceTree = "<group>";
 		};
 		FF019776B6D3FFAAE7A711F2 /* Pods */ = {
@@ -257,10 +291,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB3C7EBD240291D500C3E433 /* KeychainLevel.swift in Sources */,
 				6925005D23FEC3EA0008292D /* ViewController.swift in Sources */,
 				6925005923FEC3EA0008292D /* AppDelegate.swift in Sources */,
+				EB3C7EC12402921300C3E433 /* KeychainItemClass.swift in Sources */,
+				EB3C7EBA2402919400C3E433 /* KeychainItem.swift in Sources */,
 				6925005B23FEC3EA0008292D /* SceneDelegate.swift in Sources */,
+				EB3C7EC3240292A500C3E433 /* KeychainConfiguration.swift in Sources */,
 				6925006F23FEC63D0008292D /* R.generated.swift in Sources */,
+				EB3C7EBF240291F200C3E433 /* KeyConstructor.swift in Sources */,
+				EB3C7EC524029D9E00C3E433 /* KeychainDataStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
