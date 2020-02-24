@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Private methods
     
     private func setupInitialModule() {
-        let viewController = AuthViewController()
+        let viewController = AuthModuleAssembly.assembleModule()
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
