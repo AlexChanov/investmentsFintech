@@ -9,15 +9,12 @@
 import UIKit
 import AuthModule
 
-class ViewController: UIViewController {
-
-    let authView = AuthViewController()
-    
+class ViewController: UIViewController {    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let view = R.storyboard.launchScreen()
-        view.backgroundColor = authView.view.backgroundColor
+        let view = R.storyboard.launchScreen()
+        
     }
 
 }
