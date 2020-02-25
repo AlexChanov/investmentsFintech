@@ -9,12 +9,13 @@
 import UIKit
 import AuthModule
 
-class ViewController: UIViewController {    
+// MARK: - ViewController
+
+final class ViewController: UIViewController {
+
+    // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let view = R.storyboard.launchScreen()
-        
     }
-
 }

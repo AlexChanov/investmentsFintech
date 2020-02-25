@@ -9,21 +9,30 @@
 import UIKit
 import AuthModule
 
+// MARK: - AppDelegate
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder {
+
+    // MARK: - Properties
     
     var window: UIWindow?
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+}
+
+// MARK: - UIApplicationDelegate
+
+extension AppDelegate: UIApplicationDelegate {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
         window = UIWindow(frame: UIScreen.main.bounds)
         setupInitialModule()
-        
+
         return true
     }
-    
+
     // MARK: - Private methods
-    
+
     private func setupInitialModule() {
         let viewController = AuthModuleAssembly.assembleModule()
         window?.rootViewController = viewController
