@@ -17,16 +17,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        setupInitialModule()
+        checkInitialModule()
         
         return true
     }
     
     // MARK: - Private methods
     
-    private func setupInitialModule() {
-        let viewController = AuthModuleAssembly.assembleModule()
-        window?.rootViewController = viewController
+    private func checkInitialModule() {
+        
+        let storage = KeychainDataStorage()
+        let key = "MyAccountPassword"
+        
+        guard let pass = storage.getData(forKey: key) else {
+            let viewController = AuthModuleAssembly.assembleModule()
+            window?.rootViewController = viewController
+            window?.makeKeyAndVisible()
+
+            return
+        }
+        
+        let verificationViewController = PINVerificationViewController()
+        window?.rootViewController = verificationViewController
         window?.makeKeyAndVisible()
     }
 }

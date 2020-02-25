@@ -47,7 +47,6 @@ class PINVerificationViewController: UIViewController {
     private var sighInButton: UIButton = {
         let button = UIButton()
         button.setTitle("Войти", for: .normal)
-        button.isEnabled = false
         button.alpha = 0.5
         button.backgroundColor = .lightGray
         button.addTarget(self, action: #selector(transitionNextView), for: .touchUpInside)
