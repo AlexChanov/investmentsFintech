@@ -7,5 +7,6 @@ target 'InvestmentsFintech' do
 
   pod 'R.swift'
   pod 'SwiftLint'
-
+  pod 'AuthModule', :git => 'https://github.com/MaxiJunkie/AuthModuleLibrary.git', :branch => 'dev'
+      
 end

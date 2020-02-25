@@ -7,14 +7,14 @@
 //
 
 import UIKit
+import AuthModule
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController {    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let view = R.storyboard.launchScreen()
-
+        
     }
 
 }
