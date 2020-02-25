@@ -14,6 +14,8 @@
 		6925006223FEC3EC0008292D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6925006123FEC3EC0008292D /* Assets.xcassets */; };
 		6925006523FEC3EC0008292D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6925006323FEC3EC0008292D /* LaunchScreen.storyboard */; };
 		6925006F23FEC63D0008292D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6925006E23FEC63D0008292D /* R.generated.swift */; };
+		69A911052405A02B005B21E8 /* PINVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A911032405A02A005B21E8 /* PINVerificationViewController.swift */; };
+		69A911062405A02B005B21E8 /* PINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A911042405A02A005B21E8 /* PINViewController.swift */; };
 		EB3C7EBA2402919400C3E433 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C7EB92402919400C3E433 /* KeychainItem.swift */; };
 		EB3C7EBD240291D500C3E433 /* KeychainLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C7EBC240291D500C3E433 /* KeychainLevel.swift */; };
 		EB3C7EBF240291F200C3E433 /* KeyConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C7EBE240291F200C3E433 /* KeyConstructor.swift */; };
@@ -33,6 +35,8 @@
 		6925006423FEC3EC0008292D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6925006623FEC3EC0008292D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6925006E23FEC63D0008292D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		69A911032405A02A005B21E8 /* PINVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PINVerificationViewController.swift; sourceTree = "<group>"; };
+		69A911042405A02A005B21E8 /* PINViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PINViewController.swift; sourceTree = "<group>"; };
 		C234934864A5E0EAE343106E /* Pods-InvestmentsFintech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvestmentsFintech.release.xcconfig"; path = "Target Support Files/Pods-InvestmentsFintech/Pods-InvestmentsFintech.release.xcconfig"; sourceTree = "<group>"; };
 		C6FF49412929EC96C7044CCA /* Pods_InvestmentsFintech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InvestmentsFintech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3C7EB92402919400C3E433 /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainItem.swift; path = InvestmentsFintech/Core/Keychain/KeychainItem.swift; sourceTree = SOURCE_ROOT; };
@@ -90,6 +94,7 @@
 				EB3C7EB82402917200C3E433 /* Core */,
 				6925006D23FEC6270008292D /* Resourses */,
 				6925005823FEC3EA0008292D /* AppDelegate.swift */,
+				69A911012405A02A005B21E8 /* PINModule */,
 				6925005C23FEC3EA0008292D /* ViewController.swift */,
 				6925005E23FEC3EA0008292D /* Main.storyboard */,
 				6925006123FEC3EC0008292D /* Assets.xcassets */,
@@ -106,6 +111,16 @@
 			);
 			path = Resourses;
 			sourceTree = "<group>";
+		};
+		69A911012405A02A005B21E8 /* PINModule */ = {
+			isa = PBXGroup;
+			children = (
+				69A911032405A02A005B21E8 /* PINVerificationViewController.swift */,
+				69A911042405A02A005B21E8 /* PINViewController.swift */,
+			);
+			name = PINModule;
+			path = InvestmentsFintech/PINModule;
+			sourceTree = SOURCE_ROOT;
 		};
 		EB3C7EB82402917200C3E433 /* Core */ = {
 			isa = PBXGroup;
@@ -293,7 +308,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB3C7EBD240291D500C3E433 /* KeychainLevel.swift in Sources */,
+				69A911062405A02B005B21E8 /* PINViewController.swift in Sources */,
 				6925005D23FEC3EA0008292D /* ViewController.swift in Sources */,
+				69A911052405A02B005B21E8 /* PINVerificationViewController.swift in Sources */,
 				6925005923FEC3EA0008292D /* AppDelegate.swift in Sources */,
 				EB3C7EC12402921300C3E433 /* KeychainItemClass.swift in Sources */,
 				EB3C7EBA2402919400C3E433 /* KeychainItem.swift in Sources */,
