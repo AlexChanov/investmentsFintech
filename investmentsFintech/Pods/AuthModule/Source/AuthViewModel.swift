@@ -8,6 +8,9 @@
 import Foundation
 
 public final class AuthViewModel {
+    private(set) var loginIsValid = false
+    private(set) var passwordIsValid = false
+    
     enum TextFieldType {
         case login(text: String)
         case password(text: String)
@@ -50,12 +53,32 @@ public final class AuthViewModel {
                 pattern: type.pattern,
                 options: .caseInsensitive
             ).firstMatch(in: type.text, options: [], range: range) == nil {
+                switch type {
+                    case .login:
+                        loginIsValid = false
+                    case .password:
+                        passwordIsValid = false
+                }
+                
                 throw type.error
             }
         } catch {
+            switch type {
+                case .login:
+                    loginIsValid = false
+                case .password:
+                    passwordIsValid = false
+            }
             throw type.error
         }
         
+        switch type {
+            case .login:
+                loginIsValid = true
+            case .password:
+                passwordIsValid = true
+        }
+    
         return type.text
     }
 }

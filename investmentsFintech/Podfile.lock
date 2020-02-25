@@ -1,5 +1,5 @@
 PODS:
-  - AuthModule (0.1.0)
+  - AuthModule (0.1.1)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
@@ -23,11 +23,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AuthModule:
-    :commit: da5f2dfb9794ae37c4b6e567c5400fce5dbe1ebb
+    :commit: e12f2dda3add78c5a94525ef88e406774b650509
     :git: https://github.com/MaxiJunkie/AuthModuleLibrary.git
 
 SPEC CHECKSUMS:
-  AuthModule: cc60e1f14332073af047f3dcb8a97facc2807a46
+  AuthModule: 694f9107c81427bbb83500e2eb59ea7222ee53b0
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
