@@ -90,6 +90,15 @@ class PINViewController: UIViewController {
     }
     
     @objc private func transitionNextView() {
+    
+        guard let password = repasswordTextField.text else {
+            return
+        }
+        let storage = KeychainDataStorage()
+        let key = "MyAccountPassword"
+        guard let data = password.data(using: .utf8) else { return }
+        storage.save(encodedData: data, forKey: key)
+        
         let vc = UIViewController()
         vc.modalPresentationStyle = .fullScreen
         vc.view.backgroundColor = .white
