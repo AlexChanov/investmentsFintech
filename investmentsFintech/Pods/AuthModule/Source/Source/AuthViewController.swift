@@ -43,10 +43,17 @@ public final class AuthViewController: UIViewController {
         return textField
     }()
     
-    private let pinToggle = UISwitch()
-    private lazy var sighInButton: UIButton = {
+    private lazy var pinToggle: UISwitch = {
+        let toggle = UISwitch()
+        toggle.translatesAutoresizingMaskIntoConstraints = false
+        toggle.addTarget(self, action: #selector(didTapToSwitcher), for: .touchUpInside)
+        return toggle
+    }()
+    
+    private lazy var signInButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Войти", for: .normal)
+        button.setTitle("Sign in", for: .normal)
+        button.addTarget(self, action: #selector(didTapToButton), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.isEnabled = false
         button.alpha = 0.5
@@ -69,6 +76,7 @@ public final class AuthViewController: UIViewController {
 extension AuthViewController: ViewModelOwning {
     public typealias ViewModel = AuthViewModel
     
+    @discardableResult
     public func configure(with model: AuthViewModel) -> Self {
         viewModel = model        
         return self
@@ -103,8 +111,7 @@ private extension AuthViewController {
                                                    constant: Layout.offsetBetweenTextFields),
             passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
-        
-        pinToggle.translatesAutoresizingMaskIntoConstraints = false
+    
         view.addSubview(pinToggle)
         NSLayoutConstraint.activate([
             pinToggle.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor,
@@ -112,14 +119,22 @@ private extension AuthViewController {
             pinToggle.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
-        view.addSubview(sighInButton)
+        view.addSubview(signInButton)
         NSLayoutConstraint.activate([
-            sighInButton.heightAnchor.constraint(equalToConstant: Layout.buttonSize.height),
-            sighInButton.widthAnchor.constraint(equalToConstant: Layout.buttonSize.width),
-            sighInButton.topAnchor.constraint(equalTo: pinToggle.bottomAnchor,
+            signInButton.heightAnchor.constraint(equalToConstant: Layout.buttonSize.height),
+            signInButton.widthAnchor.constraint(equalToConstant: Layout.buttonSize.width),
+            signInButton.topAnchor.constraint(equalTo: pinToggle.bottomAnchor,
                                                   constant: Layout.offsetBetweenTextFields),
-            sighInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            signInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+    }
+    
+    @objc func didTapToSwitcher() {
+        currentViewModel.pinIsOn.toggle()
+    }
+    
+    @objc func didTapToButton() {
+        currentViewModel.signInButtonTapped()
     }
 }
 
@@ -151,11 +166,11 @@ extension AuthViewController: UITextFieldDelegate {
         }
         
         if currentViewModel.loginIsValid, currentViewModel.passwordIsValid {
-            sighInButton.alpha = 1
-            sighInButton.isEnabled = true
+            signInButton.alpha = 1
+            signInButton.isEnabled = true
         } else {
-            sighInButton.alpha = 0.5
-            sighInButton.isEnabled = false
+            signInButton.alpha = 0.5
+            signInButton.isEnabled = false
         }
         
         return true
