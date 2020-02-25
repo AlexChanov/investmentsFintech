@@ -25,6 +25,7 @@ private extension AuthViewController {
     enum Layout {
         static let yOffset: CGFloat = -100
         static let textFieldSize = CGSize(width: 200, height: 40)
+        static let offsetBetweenTextFields: CGFloat = 25
     }
     
     func setupLayout() {
@@ -37,13 +38,29 @@ private extension AuthViewController {
         loginTextField.translatesAutoresizingMaskIntoConstraints = false
         loginTextField.borderStyle = .roundedRect
         
-        
         view.addSubview(loginTextField)
         NSLayoutConstraint.activate([
             loginTextField.heightAnchor.constraint(equalToConstant: Layout.textFieldSize.height),
             loginTextField.widthAnchor.constraint(equalToConstant: Layout.textFieldSize.width),
             loginTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: Layout.yOffset),
             loginTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        passwordTextField.placeholder = "Password"
+        passwordTextField.textAlignment = .left
+        passwordTextField.textColor = .black
+        passwordTextField.keyboardType = .default
+        passwordTextField.isSecureTextEntry = true
+        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
+        passwordTextField.borderStyle = .roundedRect
+        
+        view.addSubview(passwordTextField)
+        NSLayoutConstraint.activate([
+            passwordTextField.heightAnchor.constraint(equalToConstant: Layout.textFieldSize.height),
+            passwordTextField.widthAnchor.constraint(equalToConstant: Layout.textFieldSize.width),
+            passwordTextField.topAnchor.constraint(equalTo: loginTextField.bottomAnchor,
+                                                   constant: Layout.offsetBetweenTextFields),
+            passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 }
