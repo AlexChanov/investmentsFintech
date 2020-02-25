@@ -8,6 +8,8 @@
 import Foundation
 
 public final class AuthViewModel {
+    var pinIsOn = false
+    
     private(set) var loginIsValid = false
     private(set) var passwordIsValid = false
     
@@ -43,8 +45,18 @@ public final class AuthViewModel {
         }
     }
     
-    // MARK: - Public methods
+    // MARK: - Init
     
+    init(router: AuthModuleRouter) {
+        self.router = router
+    }
+    
+    // MARK: - Private properties
+    
+    private let router: AuthModuleRouter
+}
+
+extension AuthViewModel {
     @discardableResult
     func validated(with type: TextFieldType) throws -> String {
         do {
@@ -59,7 +71,7 @@ public final class AuthViewModel {
                     case .password:
                         passwordIsValid = false
                 }
-                
+                   
                 throw type.error
             }
         } catch {
@@ -67,18 +79,27 @@ public final class AuthViewModel {
                 case .login:
                     loginIsValid = false
                 case .password:
-                    passwordIsValid = false
+                passwordIsValid = false
             }
             throw type.error
         }
-        
+           
         switch type {
             case .login:
                 loginIsValid = true
             case .password:
                 passwordIsValid = true
         }
-    
+       
         return type.text
+    }
+    
+    func signInButtonTapped() {
+        
+        if pinIsOn {
+            router.showPinModule()
+        } else {
+            router.showNextModule()
+        }
     }
 }

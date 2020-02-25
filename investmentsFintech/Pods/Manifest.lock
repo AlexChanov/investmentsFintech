@@ -23,7 +23,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AuthModule:
-    :commit: e12f2dda3add78c5a94525ef88e406774b650509
+    :commit: 8da1a101d4d8ee703946814bb6a27fe981fb09b2
     :git: https://github.com/MaxiJunkie/AuthModuleLibrary.git
 
 SPEC CHECKSUMS:
