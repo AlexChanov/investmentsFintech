@@ -8,7 +8,9 @@
 public final class AuthModuleAssembly {
     public static func assembleModule() -> AuthViewController {
         
-        let view = AuthViewController()
+        let viewModel = AuthViewModel()
+        let view = AuthViewController().configure(with: viewModel)
+        
         return view
     }
 }
