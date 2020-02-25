@@ -77,10 +77,24 @@ class PINVerificationViewController: UIViewController {
     }
     
     @objc private func transitionNextView() {
+        
+        let storage = KeychainDataStorage()
+        let key = "MyAccountPassword"
+        guard let pass = storage.getData(forKey: key) else {
+            showAlert(message: "There is no data for \(key) in Keychain")
+            return
+        }
+        
         let vc = UIViewController()
         vc.modalPresentationStyle = .fullScreen
         vc.view.backgroundColor = .white
         present(vc, animated: true, completion: nil)
+    }
+    
+    private func showAlert(message: String) {
+        let alert = UIAlertController(title: "Upps", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
