@@ -45,7 +45,6 @@
 		5B5D6303E6BD4A611F64D519A76B6849 /* Data+FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFBD3091A8F84C8871AC75BA0271A70 /* Data+FileResource.swift */; };
 		643F9910D5335B7F65DF9CF89BF9C486 /* AuthModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B6D3F77D445A2800AB83121041C493 /* AuthModule-dummy.m */; };
 		680AEC5E7C049F327CD07A09642E14CC /* FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7104B034A1ED4EA13063939B9EFF1 /* FileResource.swift */; };
-		69A910EB240589AA005B21E8 /* PINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A910EA240589AA005B21E8 /* PINViewController.swift */; };
 		71B273E749EEA83662770BC064B232E4 /* UITableView+ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CDA14F12794D909446150C92CDBC74 /* UITableView+ReuseIdentifierProtocol.swift */; };
 		787C2D5A903E84974D32122E3BC7271F /* NibResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B102EADB155DC8052AC4FCC213AA2 /* NibResource.swift */; };
 		78FEB707F4316AB0B6DAC1B0A54782CE /* UIStoryboard+StoryboardResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E5FD69A92091600858D568F3D5F8B /* UIStoryboard+StoryboardResource.swift */; };
@@ -135,7 +134,6 @@
 		5800DB34CA6DACAA1F632E8B6643CD0D /* UIColor+ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+ColorResource.swift"; path = "Library/UIKit/UIColor+ColorResource.swift"; sourceTree = "<group>"; };
 		6202E7FF07D58D1E5D9A0BA89F7DF790 /* ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorResource.swift; path = Library/Core/ColorResource.swift; sourceTree = "<group>"; };
 		661D3A4FCBEE25956D099D6C299A2BDB /* R.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R.swift.xcconfig; sourceTree = "<group>"; };
-		69A910EA240589AA005B21E8 /* PINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINViewController.swift; sourceTree = "<group>"; };
 		6A018278910BFA59F9C83104C83F3A5C /* TypedStoryboardSegueInfo+UIStoryboardSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TypedStoryboardSegueInfo+UIStoryboardSegue.swift"; path = "Library/UIKit/TypedStoryboardSegueInfo+UIStoryboardSegue.swift"; sourceTree = "<group>"; };
 		6B246222EAF00E7CCCE4CABF2CC3C968 /* UIViewController+NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+NibResource.swift"; path = "Library/UIKit/UIViewController+NibResource.swift"; sourceTree = "<group>"; };
 		6B74629FD294B12AF5D8A8EC43085DAF /* UIImage+ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ImageResource.swift"; path = "Library/UIKit/UIImage+ImageResource.swift"; sourceTree = "<group>"; };
@@ -248,19 +246,10 @@
 			path = R.swift;
 			sourceTree = "<group>";
 		};
-		69A910E92405897B005B21E8 /* PINModule */ = {
-			isa = PBXGroup;
-			children = (
-				69A910EA240589AA005B21E8 /* PINViewController.swift */,
-			);
-			path = PINModule;
-			sourceTree = "<group>";
-		};
 		7522634CA0CC95C36AA174AD817BCCB8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				838BBCFBC4B3B538B8054A1D4AAD042F /* AuthModule */,
-				69A910E92405897B005B21E8 /* PINModule */,
 				2C6A8A6C7FD36D83F7E75C6D57A673F4 /* R.swift */,
 				04C51D5DDABED2CDDD034A028F401979 /* R.swift.Library */,
 				9846C3CFBDCD543E267A0A9AAD3A4A7F /* SwiftLint */,
@@ -546,7 +535,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				643F9910D5335B7F65DF9CF89BF9C486 /* AuthModule-dummy.m in Sources */,
-				69A910EB240589AA005B21E8 /* PINViewController.swift in Sources */,
 				E3D5294D72043613161492CB5DAB4B93 /* AuthModuleAssembly.swift in Sources */,
 				84229A5D0EBD1AD8A75FA0CCD5D007CA /* AuthViewController.swift in Sources */,
 				25C5B086098A402958E6A88474E2EE19 /* AuthViewModel.swift in Sources */,
