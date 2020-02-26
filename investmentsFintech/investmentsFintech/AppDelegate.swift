@@ -22,15 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-// MARK: - Private methods
+    // MARK: - Private methods
     
     private func checkInitialModule() {
         
         let storage = KeychainDataStorage()
         let key = "MyAccountPassword"
         
-        guard let pass = storage.getData(forKey: key) else {
-            let viewController = AuthModuleAssembly.assembleModule()
+        guard let _ = storage.getData(forKey: key) else {
+            let viewController = AuthModuleAssembly.assembleModule(output: self)
             window?.rootViewController = viewController
             window?.makeKeyAndVisible()
 
@@ -40,5 +40,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let verificationViewController = PINVerificationViewController()
         window?.rootViewController = verificationViewController
         window?.makeKeyAndVisible()
+    }
+}
+
+// MARK: - AuthModuleOutput
+
+extension AppDelegate: AuthModuleOutput {
+    func showPinModule() {
+        let verificationViewController = PINViewController()
+        guard let vc = window?.rootViewController as? UINavigationController else { return }
+        vc.pushViewController(verificationViewController,
+                              animated: true)
+    }
+
+    func showNextModule() {
+        let viewController = ViewController()
+        guard let vc = window?.rootViewController as? UINavigationController else { return }
+        vc.pushViewController(viewController,
+                              animated: true)
     }
 }

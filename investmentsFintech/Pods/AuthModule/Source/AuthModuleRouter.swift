@@ -7,22 +7,27 @@
 
 import Foundation
 
+public protocol AuthModuleOutput: AnyObject {
+    func showPinModule()
+    func showNextModule()
+}
+
 final class AuthModuleRouter {
-    private weak var viewController: UIViewController?
+    private weak var output: AuthModuleOutput?
     
     // MARK: - Init
     
-    init(viewController: UIViewController) {
-        self.viewController = viewController
+    init(output: AuthModuleOutput?) {
+        self.output = output
     }
 }
 
 extension AuthModuleRouter {
     func showPinModule() {
-        print("showPinModule")
+        output?.showPinModule()
     }
     
     func showNextModule() {
-        print("showNextModule")
+        output?.showNextModule()
     }
 }

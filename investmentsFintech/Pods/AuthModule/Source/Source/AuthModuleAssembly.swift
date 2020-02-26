@@ -6,10 +6,10 @@
 //
 
 public final class AuthModuleAssembly {
-    public static func assembleModule() -> UINavigationController {
+    public static func assembleModule(output: AuthModuleOutput) -> UINavigationController {
         
         let view = AuthViewController()
-        let router = AuthModuleRouter(viewController: view)
+        let router = AuthModuleRouter(output: output)
         let viewModel = AuthViewModel(router: router)
         
         view.configure(with: viewModel)
