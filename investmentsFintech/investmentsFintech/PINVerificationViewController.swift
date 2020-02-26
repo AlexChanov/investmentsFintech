@@ -1,11 +1,11 @@
 //
-//  qViewController.swift
+//  PINVerificationViewController.swift
 //  InvestmentsFintech
 //
 //  Created by Алексей ]Чанов on 25/02/2020.
 //  Copyright © 2020 Алексей. All rights reserved.
 //
-
+ 
 import UIKit
 
 class PINVerificationViewController: UIViewController {
@@ -96,5 +96,7 @@ class PINVerificationViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
 }
+
+// MARK: - UITextFieldDelegate
 
 extension PINVerificationViewController: UITextFieldDelegate {}

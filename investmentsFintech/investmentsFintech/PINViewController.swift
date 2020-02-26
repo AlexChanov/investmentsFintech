@@ -1,5 +1,5 @@
 //
-//  dViewController.swift
+//  PINViewController.swift
 //  InvestmentsFintech
 //
 //  Created by Алексей ]Чанов on 25/02/2020.
@@ -90,10 +90,10 @@ class PINViewController: UIViewController {
     }
     
     @objc private func transitionNextView() {
-    
         guard let password = repasswordTextField.text else {
             return
         }
+
         let storage = KeychainDataStorage()
         let key = "MyAccountPassword"
         guard let data = password.data(using: .utf8) else { return }
@@ -108,8 +108,9 @@ class PINViewController: UIViewController {
 }
 
 // MARK: - UITextFieldDelegate
+
 extension PINViewController: UITextFieldDelegate {
-    public func textField(
+    func textField(
         _ textField: UITextField,
         shouldChangeCharactersIn range: NSRange,
         replacementString string: String
