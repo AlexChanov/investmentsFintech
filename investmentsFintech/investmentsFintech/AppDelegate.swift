@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    // MARK: - Private methods
+// MARK: - Private methods
     
     private func checkInitialModule() {
         
