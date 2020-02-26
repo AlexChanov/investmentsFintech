@@ -23,7 +23,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AuthModule:
-    :commit: 8da1a101d4d8ee703946814bb6a27fe981fb09b2
+    :commit: 65c4e1fe922cee15f88c0670a524a43f90ae7f61
     :git: https://github.com/MaxiJunkie/AuthModuleLibrary.git
 
 SPEC CHECKSUMS:
@@ -34,4 +34,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 88fa27d39c1ab98dacc4bbd8feb15cb393b2d893
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.7.4
